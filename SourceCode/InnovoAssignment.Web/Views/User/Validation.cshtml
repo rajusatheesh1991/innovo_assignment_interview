@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Validation";
+}
+
+@model UserModel
+@if (ViewBag.Message != null)
+{
+    <label class="alert-danger">@ViewBag.Message</label>
+}
+<div class="card">
+    <div class="card-header bg-danger text-white">
+        @ViewBag.Type Validation
+    </div>
+    <div class="card-body">
+
+        @Html.AntiForgeryToken()
+        <input type="hidden" value="@ViewBag.VerificationCode" id="vCode" />
+        <input type="hidden" value="@ViewBag.Id" id="eId" />
+
+        <div class="form-group">
+            <label asp-for="@Model.OtpCode">Verification Code</label>
+            <input type="email" class="form-control" asp-for="@Model.OtpCode" placeholder="Enter Verification code" maxlength="6">
+            <span id="spOtpCode" class="text-danger"></span>
+        </div>
+
+
+        <button class="btn btn-danger" onclick="validate()">Validate</button>
+
+    </div>
+    @*<div class="card-footer">
+        Resend Code <a asp-action="Validation" class="text-danger">Resend</a>
+    </div>*@
+</div>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+       function gettoken() {
+
+        token = $("[name=__RequestVerificationToken").val();
+        return token;
+    }
+    function validate() {
+
+
+
+        if ($('#OtpCode').val() == "") {
+            $('#spOtpCode').html("Please enter verification code");
+
+        }
+        else {
+            var data = {
+                __RequestVerificationToken: gettoken(),
+                Id: $('#eId').val(),
+                sCode: $('#OtpCode').val(),
+                vCode: $('#vCode').val()
+
+
+            };
+            console.log(data);
+            $.ajax({
+                type: "POST",
+                url: "/User/ValidateVerificationCode",
+                data: data,
+                dataType: 'json',
+                contentType: 'application/x-www-form-urlencoded; charset=utf-8',
+                success: function (data) {
+                    console.log(JSON.stringify(data));
+                    if (data == 1) {
+                        window.location.href = '/User/Profile?id=' + $('#eId').val();
+                    }
+                    else {
+                        $('#spOtpCode').html("incorrect verification code");
+                    }
+                },
+            });
+        }
+
+    }
+         
+
+</script>

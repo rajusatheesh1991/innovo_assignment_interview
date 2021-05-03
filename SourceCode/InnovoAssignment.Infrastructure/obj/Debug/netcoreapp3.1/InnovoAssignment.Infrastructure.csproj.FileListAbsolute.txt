@@ -1,0 +1,15 @@
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.deps.json
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.dll
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.dll
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.csprojAssemblyReference.cache
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.AssemblyInfoInputs.cache
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.AssemblyInfo.cs
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.csproj.CopyComplete
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.dll
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\obj\Debug\netcoreapp3.1\InnovoAssignment.Infrastructure.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.dll
+D:\MyProjects\Assignments\InnovoAssignment.Infrastructure\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.pdb

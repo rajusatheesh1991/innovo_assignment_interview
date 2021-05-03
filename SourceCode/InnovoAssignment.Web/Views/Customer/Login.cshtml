@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+}
+
+@model UserModel
+<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" type="text/css" />
+
+
+
+@if (ViewBag.Message != null)
+{
+    <label class="alert-danger">@ViewBag.Message</label>
+}
+
+<div class="container-fluid mt-4">
+    <div class="card   align-items-center border-0">
+        <div class="card-header bg-primary text-white col-6">
+            Login
+        </div>
+        <div class="card-body col-6 bg-light">
+
+
+            <form asp-action="ValidateCredentials" asp-controller="Customer" method="post">
+
+
+
+                @Html.AntiForgeryToken()
+                <input type="hidden" asp-for="@Model.Update" value="false" />
+                <div class="form-group">
+                    <label asp-for="@Model.Email"></label>
+                    <input type="email" class="form-control" asp-for="@Model.Email" aria-describedby="emailHelp" placeholder="Enter email" />
+                    <small id="emailHelp" class="form-text text-muted">We'll send the verification code to your email.</small>
+                    <span id="spemail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="@Model.Password"></label>
+                    <div class="input-group" id="show_hide_password">
+                        <input class="form-control" type="password" asp-for="@Model.Password" placeholder="Enter password" maxlength="4" />
+                        <div class="input-group-addon bg-white" style="padding-top:5px;padding-bottom:5px;padding-right:5px;padding-left:5px;">
+                            <a href=""><i class="fa fa-eye-slash" aria-hidden="true"></i></a>
+                        </div>
+
+                    </div>
+                    <span id="sppassword" class="text-danger"></span>
+                </div>
+
+                <button class="btn btn-primary col-12 mt-4" onclick="return validate()">Login</button>
+
+
+            </form>
+
+
+
+            <div class="mt-4 text-center">
+                New User <a asp-action="SignUp" class="text-primary">SignUp</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<script>
+    function validate() {
+
+
+        // Validate Email
+        if ($('#Email').val() == "") {
+            $('#spemail').html("Please enter Email");
+            return false;
+        }
+        else {
+
+            $('#spemail').html("");
+        }
+
+        if ($('#Password').val() == "") {
+            $('#sppassword').html("Please enter password");
+            return false;
+        }
+
+        return true;
+    }
+    $(document).ready(function () {
+        $("#show_hide_password a").on('click', function (event) {
+            event.preventDefault();
+            if ($('#show_hide_password input').attr("type") == "text") {
+                $('#show_hide_password input').attr('type', 'password');
+                $('#show_hide_password i').addClass("fa-eye-slash");
+                $('#show_hide_password i').removeClass("fa-eye");
+            } else if ($('#show_hide_password input').attr("type") == "password") {
+                $('#show_hide_password input').attr('type', 'text');
+                $('#show_hide_password i').removeClass("fa-eye-slash");
+                $('#show_hide_password i').addClass("fa-eye");
+            }
+        });
+
+
+
+
+
+    });
+</script>
+
+
+
+

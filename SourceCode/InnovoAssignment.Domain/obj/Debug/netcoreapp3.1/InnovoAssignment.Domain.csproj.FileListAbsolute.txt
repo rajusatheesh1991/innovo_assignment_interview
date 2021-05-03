@@ -1,0 +1,8 @@
+D:\MyProjects\Assignments\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.deps.json
+D:\MyProjects\Assignments\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\MyProjects\Assignments\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.csprojAssemblyReference.cache
+D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.AssemblyInfoInputs.cache
+D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.AssemblyInfo.cs
+D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb

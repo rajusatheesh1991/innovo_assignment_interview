@@ -1,0 +1,162 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model UserModel
+
+
+@if (ViewBag.Message != null)
+{
+    <label class="alert-danger">@ViewBag.Message</label>
+}
+<div class="card">
+    <div class="card-header text-white bg-secondary">
+        Profile
+    </div>
+    <div class="card-body">
+
+
+        <form asp-action="SaveUser" asp-controller="User" method="post">
+
+            @Html.AntiForgeryToken()
+
+            <input type="hidden" asp-for="@Model.Id" />
+            <input type="hidden" asp-for="@Model.Update" value="true" />
+
+            <div class="form-group">
+                <label asp-for="@Model.Email"></label>
+                <input type="email" class="form-control" asp-for="@Model.Email" readonly maxlength="60" />
+             
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.FullName"></label>
+                <input type="text" class="form-control" asp-for="@Model.FullName" placeholder="Enter fullname" maxlength="60" />
+                <span id="spFullName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@Model.PhoneNumber"></label>
+                <input type="tel" class="form-control" asp-for="@Model.PhoneNumber" placeholder="Enter phone number" maxlength="10" />
+                <span id="spPhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.AddressLine1"></label>
+                <input type="text" class="form-control" asp-for="@Model.AddressLine1" placeholder="Enter address line 1" maxlength="60" />
+                <span id="spAddressLine1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.AddressLine2"></label>
+                <input type="text" class="form-control" asp-for="@Model.AddressLine2" placeholder="Enter address line 2" maxlength="60" />
+                <span id="spAddressLine2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.City"></label>
+                <input type="text" class="form-control" asp-for="@Model.City" placeholder="Enter city" maxlength="60" />
+                <span id="spCity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.State"></label>
+                <input type="text" class="form-control" asp-for="@Model.State" placeholder="Enter state" maxlength="60" />
+                <span id="spState" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.ZipCode"></label>
+                <input type="number" class="form-control" asp-for="@Model.ZipCode" placeholder="Enter zipcode" maxlength="6" />
+                <span id="spZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Country"></label>
+                <input type="text" class="form-control" asp-for="@Model.Country" placeholder="Enter country" maxlength="60" />
+                <span id="spCountry" class="text-danger"></span>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" asp-for="@Model.EnablePromotionNotifications" />
+                <label class="form-check-label">
+                    Send promotional notifications to my email
+                </label>
+            </div>
+
+            <button  class="btn btn-primary" onclick="return validate()" style="margin-top:20px;">Update</button>
+        </form>
+
+    </div>
+
+
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+    function validate() {
+
+
+        // Validate Email
+        if ($('#FullName').val() == "") {
+            $('#spFullName').html("Please enter FullName");
+            return false;
+        }
+        else {
+
+            $('#spFullName').html("");
+        }
+
+        if ($('#PhoneNumber').val() == "") {
+            $('#spPhoneNumber').html("Please enter PhoneNumber");
+            return false;
+        }
+        else {
+
+            $('#spPhoneNumber').html("");
+        }
+
+          if ($('#AddressLine1').val() == "") {
+            $('#spAddressLine1').html("Please enter AddressLine1");
+            return false;
+        }
+        else {
+
+            $('#spAddressLine1').html("");
+        }
+
+          if ($('#City').val() == "") {
+            $('#spCity').html("Please enter City");
+            return false;
+        }
+        else {
+
+            $('#spCity').html("");
+        }
+
+         if ($('#State').val() == "") {
+            $('#spState').html("Please enter State");
+            return false;
+        }
+        else {
+
+            $('#spState').html("");
+        }
+
+
+         if ($('#ZipCode').val() == "") {
+            $('#spZipCode').html("Please enter ZipCode");
+            return false;
+        }
+        else {
+
+            $('#spZipCode').html("");
+        }
+
+         if ($('#Country').val() == "") {
+            $('#spCountry').html("Please enter Country");
+            return false;
+        }
+        else {
+
+            $('#spCountry').html("");
+        }
+
+        return true;
+    }
+
+    </script>

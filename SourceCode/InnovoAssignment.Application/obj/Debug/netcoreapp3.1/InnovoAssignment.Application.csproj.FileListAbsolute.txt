@@ -1,0 +1,13 @@
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.csprojAssemblyReference.cache
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.AssemblyInfoInputs.cache
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.AssemblyInfo.cs
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.deps.json
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.dll
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.csproj.CopyComplete
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.dll
+D:\MyProjects\Assignments\InnovoAssignment.Application\obj\Debug\netcoreapp3.1\InnovoAssignment.Application.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.dll
+D:\MyProjects\Assignments\InnovoAssignment.Application\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.pdb

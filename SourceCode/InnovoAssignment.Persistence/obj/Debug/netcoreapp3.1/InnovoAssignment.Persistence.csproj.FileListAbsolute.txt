@@ -1,0 +1,15 @@
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.csprojAssemblyReference.cache
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.AssemblyInfoInputs.cache
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.AssemblyInfo.cs
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Persistence.deps.json
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Persistence.dll
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Persistence.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.dll
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Application.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.csproj.CopyComplete
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.dll
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\obj\Debug\netcoreapp3.1\InnovoAssignment.Persistence.pdb
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.dll
+D:\MyProjects\Assignments\InnovoAssignment.Persistence\bin\Debug\netcoreapp3.1\InnovoAssignment.Utilities.pdb
