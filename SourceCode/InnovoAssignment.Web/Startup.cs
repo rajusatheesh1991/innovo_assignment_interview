@@ -2,6 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hangfire;
+using Hangfire.SqlServer;
+using InnovoAssignment.Web.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -29,9 +32,28 @@ namespace InnovoAssignment.Web
                 options.Cookie.HttpOnly = true;
                 options.Cookie.IsEssential = true;
             });
-           // services.AddApplicationServices();
-           // services.AddInfrastructureServices(Configuration);
-           //services.AddPersistenceServices(Configuration);
+
+       //     var options=  new SqlServerStorageOptions
+
+       //     {
+       //         CommandBatchMaxTimeout = TimeSpan.FromMinutes(15),
+       //         SlidingInvisibilityTimeout = TimeSpan.FromMinutes(15),
+       //         QueuePollInterval = TimeSpan.Zero,
+       //         UseRecommendedIsolationLevel = true,
+       //         DisableGlobalLocks = true
+       //     };
+       //     JobStorage.Current = new SqlServerStorage("HangfireConnection", options);
+       //     services.AddHangfire(configuration => configuration
+       // .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+       // .UseSimpleAssemblyNameTypeSerializer()
+       // .UseRecommendedSerializerSettings()
+       // .UseSqlServerStorage(Configuration.GetConnectionString("HangfireConnection"),
+       //options));
+            
+       //     // Add the processing server as IHostedService
+       //     services.AddHangfireServer();
+
+
             services.AddWebServices();
             services.AddControllersWithViews().AddRazorRuntimeCompilation();
 
@@ -49,7 +71,10 @@ namespace InnovoAssignment.Web
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
-
+            //app.UseHangfireDashboard("/hangfire", new DashboardOptions
+            //{
+            //    Authorization = new[] { new HangfireAuthorizationFilter() }
+            //});
             app.UseRouting();
 
             app.UseAuthorization();

@@ -9,6 +9,8 @@ namespace InnovoAssignment.Application.Contracts.Persistence
     public interface IUserRepository:IAsyncRepository<User>
     {
 
+        int AuthenticateWithEmailAndPassword(string email, string password);
+
         User SignupWithSp(User user);
 
         bool UpdateUserWithSp(User user);

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hangfire;
 using InnovoAssignment.Application;
 using InnovoAssignment.Infrastructure;
 using InnovoAssignment.Persistence;
@@ -33,6 +34,7 @@ namespace InnovoAssignment.API
             services.AddInfrastructureServices(Configuration);
             services.AddPersistenceServices(Configuration);
             services.AddControllers();
+          
             AddSwagger(services);
             services.AddCors(options =>
             {
@@ -70,7 +72,7 @@ namespace InnovoAssignment.API
             }
 
             app.UseHttpsRedirection();
-
+          
             app.UseRouting();
 
             app.UseSwagger();

@@ -14,6 +14,8 @@ namespace InnovoAssignment.Application.Security
 
         bool Verify(string password,string savedHash);
 
+        string GetPasswordHash(string password, string savedHash);
+
     }
 
     public class Pbkdf2EncryptDecryptManager : IEncryptDecryptManager
@@ -57,8 +59,22 @@ namespace InnovoAssignment.Application.Security
             return Convert.ToBase64String(salt) + SEPARATOR + hash;
         }
 
-        
+        public string GetPasswordHash(string password, string savedHash)
+        {
+            var split = savedHash.Split(SEPARATOR);
 
-       
+            byte[] saltBytes = Convert.FromBase64String(split[SALT_INDEX]);
+
+
+            // derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
+            string hash = Convert.ToBase64String(KeyDerivation.Pbkdf2(
+                password: password,
+                salt: saltBytes,
+                prf: KeyDerivationPrf.HMACSHA1,
+                iterationCount: 10000,
+                numBytesRequested: 256 / 8));
+
+            return Convert.ToBase64String(saltBytes) + SEPARATOR + hash;
+        }
     }
 }

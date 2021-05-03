@@ -68,8 +68,9 @@ namespace InnovoAssignment.Application.Features.UserManagement.Queries
 
                     if (userFromDb != null)
                     {
+                        string hashForEntredPw = encryptDecryptManager.GetPasswordHash(request.Password, userFromDb.Password);
 
-                        if (encryptDecryptManager.Verify(request.Password, userFromDb.Password))
+                        if (_userRepository.AuthenticateWithEmailAndPassword(request.Email, hashForEntredPw)>0)
                         {
                             response.Success = true;
                             response.Data = userFromDb.Id;

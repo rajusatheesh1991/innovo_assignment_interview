@@ -8,15 +8,7 @@
 
 
 
-@if (ViewBag.Message != null)
-{
-   
 
-
-        <label class="alert-danger">@ViewBag.Message</label>
-
-    
-}
 
 <div class="container-fluid mt-4">
     <div class="card  align-items-center border-0">
@@ -58,10 +50,13 @@
                 Already registered <a asp-action="Login" class="text-success">Login</a>
             </div>
         </div>
-      
 
+        @Html.Partial("ValidationError.cshtml", null)
 
     </div>
+
+
+        
 </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
 

@@ -31,6 +31,11 @@ namespace InnovoAssignment.Web.Controllers
         {
             return View();
         }
+
+        public IActionResult VerifyAccount(int id)
+        {
+            return View();
+        }
         public IActionResult SignUp()
         {
             ViewBag.Message = TempData["response"];

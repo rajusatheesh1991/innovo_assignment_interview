@@ -15,7 +15,9 @@ namespace InnovoAssignment.Utilities
 
         public const string PREF_CREATE_UPDATE_SP = "EXEC Pref_Create_Update @Action, @Id,@UserId, @Enable,@RID OUTPUT";
 
+        public const string USER_AUTHENTICATE_SP = "EXEC User_Authenticate @Email,@Password,@RID OUTPUT";
 
         
+
     }
 }

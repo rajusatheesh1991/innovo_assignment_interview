@@ -6,7 +6,7 @@ namespace InnovoAssignment.Utilities
     {
 
         public const string REGISTRAION_EMAIL_HEADER = "Registration Successful";
-        public const string REGISTRAION_EMAIL_BODY = "You have successfully registered with Innovo Solutions";
+        public const string REGISTRAION_EMAIL_BODY = "You have successfully registered with Innovo Solutions.\nPlease use following URL for account validation. {0}";
         public const string VALIDATION_EMAIL_HEADER = "{0} Validation Code";
         public const string VALIDATION_EMAIL_BODY = "Please use {0} as {1} validation code";
 

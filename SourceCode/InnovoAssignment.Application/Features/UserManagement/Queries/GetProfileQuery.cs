@@ -32,19 +32,33 @@ namespace InnovoAssignment.Application.Features.UserManagement.Queries
 
         public Task<BaseResponse<CreateUserCommand>> Handle(GetProfileQuery request, CancellationToken cancellationToken)
         {
-            var data = _userRepository.GetById(request.Id, true);
-
-            var dto = new CreateUserCommand();
-
-             _mapper.Map<User, CreateUserCommand>(data, dto);
-             _mapper.Map<UserAddress, CreateUserCommand>(data.UserAddress, dto);
-            _mapper.Map<UserPreferences, CreateUserCommand>(data.UserPreferences, dto);
-
-
             var response = new BaseResponse<CreateUserCommand>();
-            response.Data = dto;
-            response.Message = "Success";
-            response.Success = true;
+            response.Success = false;
+            if (request.Id>0)
+            {
+                var data = _userRepository.GetById(request.Id, true);
+
+                var dto = new CreateUserCommand();
+
+                _mapper.Map<User, CreateUserCommand>(data, dto);
+                _mapper.Map<UserAddress, CreateUserCommand>(data.UserAddress, dto);
+                _mapper.Map<UserPreferences, CreateUserCommand>(data.UserPreferences, dto);
+
+
+               
+                response.Data = dto;
+                response.Message = "Success";
+                response.Success = true;
+            }
+            else
+            {
+               
+                response.Message = "Id cannot be zero";
+               
+            }
+
+
+          
 
             return Task.FromResult(response);
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\Assignments\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj": {}
+    "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj": {
+    "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj",
+        "projectUniqueName": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj",
         "projectName": "InnovoAssignment.Utilities",
-        "projectPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj",
+        "projectPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj",
         "packagesPath": "C:\\Users\\RAJU\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\obj\\",
+        "outputPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -59,14 +59,14 @@
         }
       }
     },
-    "D:\\MyProjects\\Assignments\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj": {
+    "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\Assignments\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj",
+        "projectUniqueName": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj",
         "projectName": "InnovoAssignment.Web",
-        "projectPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj",
+        "projectPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Web\\InnovoAssignment.Web.csproj",
         "packagesPath": "C:\\Users\\RAJU\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Web\\obj\\",
+        "outputPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -85,8 +85,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj": {
-                "projectPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj"
+              "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj": {
+                "projectPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Utilities\\InnovoAssignment.Utilities.csproj"
               }
             }
           }
@@ -107,6 +107,18 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[8.1.1, )"
+            },
+            "Hangfire.AspNetCore": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.Core": {
+              "target": "Package",
+              "version": "[1.7.22, )"
+            },
+            "Hangfire.SqlServer": {
+              "target": "Package",
+              "version": "[1.7.22, )"
             },
             "MediatR": {
               "target": "Package",

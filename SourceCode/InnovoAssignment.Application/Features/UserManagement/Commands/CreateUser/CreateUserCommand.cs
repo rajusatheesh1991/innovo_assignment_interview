@@ -12,6 +12,8 @@ namespace InnovoAssignment.Application.Features.UserManagement.Commands.CreateUs
 
         public int Id { get; set; }
 
+        
+
         public String PhoneNumber { get; set; }
 
         public String AddressLine1 { get; set; }
@@ -24,5 +26,7 @@ namespace InnovoAssignment.Application.Features.UserManagement.Commands.CreateUs
         public String Email { get; set; }
         public bool EnablePromotionNotifications { get; set; }
         public bool Update { get; set; }
+
+        
     }
 }

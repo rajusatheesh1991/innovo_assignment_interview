@@ -20,6 +20,30 @@ namespace InnovoAssignment.Persistence.Repositories
             this._innovoAssignmentContext = innovoAssignmentContext;
         }
 
+        public int AuthenticateWithEmailAndPassword(string email, string password)
+        {
+            int userId = 0;
+            try
+            {
+                var returnVal = new SqlParameter("@RID", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                
+                var eid = new SqlParameter("@Email", email);
+
+                var pw = new SqlParameter("@Password", password);
+
+                _innovoAssignmentContext.Database.ExecuteSqlRaw(SqlConstants.USER_AUTHENTICATE_SP, eid, pw, returnVal);
+
+
+
+                userId=(int)returnVal.Value;
+            }
+            catch (Exception e)
+            {
+                userId= - 1;
+            }
+            return userId;
+        }
+
         public User GetByEmail(string email)
         {
             return _innovoAssignmentContext.Users.Where(a => a.Email == email).AsNoTracking().FirstOrDefault();

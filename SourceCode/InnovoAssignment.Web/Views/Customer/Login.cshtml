@@ -8,10 +8,6 @@
 
 
 
-@if (ViewBag.Message != null)
-{
-    <label class="alert-danger">@ViewBag.Message</label>
-}
 
 <div class="container-fluid mt-4">
     <div class="card   align-items-center border-0">
@@ -56,6 +52,9 @@
                 New User <a asp-action="SignUp" class="text-primary">SignUp</a>
             </div>
         </div>
+        @Html.Partial("ValidationError.cshtml", null)
+
+
     </div>
 </div>
 

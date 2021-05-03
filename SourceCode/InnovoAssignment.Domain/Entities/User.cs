@@ -13,6 +13,9 @@ namespace InnovoAssignment.Domain.Entities
         public String Email { get; set; }
         public String PhoneNumber { get; set; }
 
+
+        public bool IsAccountVerified { get; set; }
+
         public String Password { get; set; }
         public UserAddress UserAddress { get; set; }
 

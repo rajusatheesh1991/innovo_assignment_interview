@@ -6,3 +6,11 @@ D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\Innovo
 D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.AssemblyInfo.cs
 D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
 D:\MyProjects\Assignments\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.deps.json
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\bin\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.csprojAssemblyReference.cache
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.AssemblyInfoInputs.cache
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.AssemblyInfo.cs
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.dll
+D:\Satheesh\GitHub\innovo_assignment_interview\SourceCode\InnovoAssignment.Domain\obj\Debug\netcoreapp3.1\InnovoAssignment.Domain.pdb

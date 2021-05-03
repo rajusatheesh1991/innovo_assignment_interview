@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MyProjects\\Assignments\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj": {}
+    "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj": {}
   },
   "projects": {
-    "D:\\MyProjects\\Assignments\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj": {
+    "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MyProjects\\Assignments\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj",
+        "projectUniqueName": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj",
         "projectName": "InnovoAssignment.Domain",
-        "projectPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj",
+        "projectPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Domain\\InnovoAssignment.Domain.csproj",
         "packagesPath": "C:\\Users\\RAJU\\.nuget\\packages\\",
-        "outputPath": "D:\\MyProjects\\Assignments\\InnovoAssignment.Domain\\obj\\",
+        "outputPath": "D:\\Satheesh\\GitHub\\innovo_assignment_interview\\SourceCode\\InnovoAssignment.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

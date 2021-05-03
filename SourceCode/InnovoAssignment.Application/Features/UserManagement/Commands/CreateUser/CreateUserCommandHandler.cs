@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Hangfire;
 using InnovoAssignment.Application.Contracts.Infrastructure;
 using InnovoAssignment.Application.Contracts.Persistence;
 using InnovoAssignment.Application.Models;
@@ -27,6 +28,7 @@ namespace InnovoAssignment.Application.Features.UserManagement.Commands.CreateUs
         private readonly IEncryptDecryptManager encryptDecryptManager;
         private readonly IEmailService _emailService;
         private readonly ILogger<CreateUserCommand> _logger;
+       
 
         public CreateUserCommandHandler(IUserRepository userRepository,
             IUserAddressRepository userAddressRepository, IUserPreferencesRepository userPreferencesRepository,
@@ -202,20 +204,14 @@ namespace InnovoAssignment.Application.Features.UserManagement.Commands.CreateUs
                             response.Data = savedUser.Id;
                             response.Message = "Registration Successful";
                             response.Success = true;
+                        SendRegistrationSuccessMail(savedUser.Id, savedUser.Email);
+                     
+                       // Hangfire call
+                        //BackgroundJob.Enqueue(() => SendRegistrationSuccessMail(savedUser.Id,savedUser.Email));
 
 
-                            try
-                            {
-                                EmailDto email = new EmailDto { To = user.Email, Body = StringConstants.REGISTRAION_EMAIL_BODY, Subject = StringConstants.REGISTRAION_EMAIL_HEADER };
-                                 _emailService.SendEmail(email);
 
-                            }
-                            catch (Exception ex)
-                            {
-                                _logger.LogError($"Mailing about board failed due to an error with the mail service: {ex.Message}");
-                            }
-
-                        }
+                    }
                         else
                         {
                             response.Message = "User save failed";
@@ -242,6 +238,35 @@ namespace InnovoAssignment.Application.Features.UserManagement.Commands.CreateUs
             }
 
             return Task.FromResult(response);
+        }
+
+        private void SendRegistrationSuccessMail(int id,string email)
+        {
+            // We will confire this domain url in appSettings.json file with 
+            //http://localhost:52885/Customer/VerifyAccount/"
+
+            try
+            {
+
+                System.Uri accountVerificationLink = new System.Uri("http://tinyurl.com/api-create.php?url=" +
+                        "http://localhost:52885/Customer/VerifyAccount/" +id);
+                System.Net.WebClient client = new System.Net.WebClient();
+                string tinyUrl = client.DownloadString(accountVerificationLink);
+
+                EmailDto emailDto = new EmailDto
+                {
+                    To = email,
+                    Body =
+                    String.Format(StringConstants.REGISTRAION_EMAIL_BODY, tinyUrl),
+                    Subject = StringConstants.REGISTRAION_EMAIL_HEADER
+                };
+                _emailService.SendEmail(emailDto);
+
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Mailing about board failed due to an error with the mail service: {ex.Message}");
+            }
         }
     }
 }
